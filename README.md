@@ -1,6 +1,8 @@
 # dsai-module-2-final-project
 
-### CSV Files and Column References
+<details>
+
+<summary>CSV Files and Column References</summary>
 
 #### olist_customers_dataset
 
@@ -99,5 +101,4 @@
 | product_category_name         | object    |
 | product_category_name_english | object    |
 
-
-
+</details>
