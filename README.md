@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><h4>CSV Files and Column References</h4></summary>
+<summary>CSV Files and Column References</summary>
 
 #### olist_customers_dataset
 
