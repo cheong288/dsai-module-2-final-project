@@ -103,8 +103,6 @@
 
 </details>
 
-<br>
-
 <details>
 <summary>Project Schema - Proposed</summary>
 
