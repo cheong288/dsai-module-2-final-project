@@ -4,7 +4,7 @@
 
 <summary>CSV Files and Column References</summary>
 
-#### olist_customers_dataset
+#### olist_customers_dataset.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -14,7 +14,7 @@
 | customer_city                 | object    |
 | customer_state                | object    |
 
-#### olist_order_items_dataset
+#### olist_order_items_dataset.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -26,7 +26,7 @@
 | price                         | float64   |
 | freight_value                 | float64   |
 
-#### olist_order_payments_dataset
+#### olist_order_payments_dataset.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -36,7 +36,7 @@
 | payment_installments          | int64     |
 | payment_value                 | float64   |
 
-#### olist_order_reviews_dataset
+#### olist_order_reviews_dataset.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -48,7 +48,7 @@
 | review_creation_date          | object    |
 | review_answer_timestamp       | object    |
 
-#### olist_orders_dataset
+#### olist_orders_dataset.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -61,7 +61,7 @@
 | order_delivered_customer_date | object    |
 | order_estimated_delivery_date | object    |
 
-#### olist_products_dataset
+#### olist_products_dataset.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -75,7 +75,7 @@
 | product_height_cm             | float64   |
 | product_width_cm              | float64   |
 
-#### olist_sellers_dataset
+#### olist_sellers_dataset.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -84,7 +84,7 @@
 | seller_city                   | object    |
 | seller_state                  | object    |
 
-#### olist_geolocation_dataset
+#### olist_geolocation_dataset.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -94,11 +94,83 @@
 | geolocation_city              | object    |
 | geolocation_state             | object    |
 
-#### product_category_name_translation
+#### product_category_name_translation.csv
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
 | product_category_name         | object    |
 | product_category_name_english | object    |
+
+</details>
+
+<br>
+
+<details>
+<summary>Project Schema - Proposed</summary>
+
+### Fact Tables
+
+#### fact_orders
+
+| Column Name                   | Data Type |
+|-------------------------------|-----------|
+| customer_id                   | object    |
+| order_id                      | object    |
+| payment_value                 | float64   |
+| payment_type                  | object    |
+
+#### fact_order_items
+
+| Column Name                   | Data Type |
+|-------------------------------|-----------|
+| customer_id                   | object    |
+| order_id                      | object    |
+| order_item_id                 | int64     |
+| product_id                    | object    |
+| seller_id                     | object    |
+| price                         | float64   |
+| freight_value                 | float64   |
+| order_approved_at             | object    |
+| order_purchase_timestamp      | object    |
+| order_delivered_customer_date | object    |
+| order_estimated_delivery_date | object    |
+
+<br>
+
+### Dimension Tables
+
+#### dim_customer
+
+| Column Name                   | Data Type |
+|-------------------------------|-----------|
+| customer_id                   | object    |
+| customer_unique_id            | object    |
+| customer_zip_code_prefix      | int64     |
+| customer_city                 | object    |
+| customer_state                | object    |
+
+#### dim_product
+
+| Column Name                   | Data Type |
+|-------------------------------|-----------|
+| product_id                    | object    |
+| product_category_name         | object    |
+
+#### dim_seller
+
+| Column Name                   | Data Type |
+|-------------------------------|-----------|
+| seller_id                     | object    |
+| seller_zip_code_prefix        | int64     |
+| seller_city                   | object    |
+| seller_state                  | object    |
+
+#### dim_geolocation
+
+| Column Name                   | Data Type |
+|-------------------------------|-----------|
+| geolocation_zip_code_prefix   | int64     |
+| geolocation_city              | object    |
+| geolocation_state             | object    |
 
 </details>
