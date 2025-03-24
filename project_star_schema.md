@@ -62,3 +62,4 @@
 | geolocation_city              | object    |
 | geolocation_state             | object    |
 
+
