@@ -1,6 +1,6 @@
 ### Fact Tables
 
-*fact_orders*
+> *fact_orders*
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -9,7 +9,7 @@
 | payment_value                 | float64   |
 | payment_type                  | object    |
 
-*fact_order_items*
+> *fact_order_items*
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -28,7 +28,7 @@
 
 ### Dimension Tables
 
-*dim_customer*
+> *dim_customer*
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -38,14 +38,14 @@
 | customer_city                 | object    |
 | customer_state                | object    |
 
-*dim_product*
+> *dim_product*
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
 | product_id                    | object    |
 | product_category_name         | object    |
 
-*dim_seller*
+> *dim_seller*
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
@@ -54,7 +54,7 @@
 | seller_city                   | object    |
 | seller_state                  | object    |
 
-*dim_geolocation*
+> *dim_geolocation*
 
 | Column Name                   | Data Type |
 |-------------------------------|-----------|
