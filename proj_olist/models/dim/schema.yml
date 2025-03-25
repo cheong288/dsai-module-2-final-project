@@ -10,5 +10,23 @@ models:
         data_tests:
           - unique
           - not_null
+  - name: dim_customer
+    description: "A customer dbt model"
+    columns:
+      - name: customer_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  - name: dim_product
+    description: "A product dbt model"
+    columns:
+      - name: product_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+
 
 
