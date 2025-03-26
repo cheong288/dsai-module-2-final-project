@@ -10,7 +10,7 @@ proj_olist: # dbt_demo name. This is where dbt looks for from dbt_project.yml ->
       method: service-account
       project: "final-project-57294"
       dataset: "ds_olist"
-      keyfile: "/home/usercheong/final_project/final-project-57294-18dd43325219.json"
+      keyfile: "final-project-57294-key.json"
       retries: 2
   config:
     send_anonymous_usage_stats: False
