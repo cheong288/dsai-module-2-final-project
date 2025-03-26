@@ -3,6 +3,7 @@
 SELECT 
   customer_id,
   o.order_id,
+  order_status,
   order_purchase_timestamp,
   payment_value,payment_type ,
   CONCAT(EXTRACT(YEAR FROM order_purchase_timestamp), '-', 

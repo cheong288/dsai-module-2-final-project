@@ -1,0 +1,10 @@
+bq rm -r ds_olist_dim
+bq rm -r ds_olist_fact
+
+dbt run --select fact_order_incremental.sql
+
+dbt seed --select test_product.csv
+
+dbt run --select product_scd2.sql
+
+
