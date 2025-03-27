@@ -5,3 +5,6 @@
 [Project Star Schema](project_star_schema.md)
 
 [Project ER Diagram](project_star_schema_erd_diagram.md)
+
+[Project Data Pipeline Script ](data_pipeline.md)
+
