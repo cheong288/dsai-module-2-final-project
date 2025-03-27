@@ -26,6 +26,9 @@ models:
         data_tests:
           - unique
           - not_null
+          - relationships:
+              to: ref('fact_order_items')
+              field: product_id
 
 
 
