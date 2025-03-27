@@ -1,0 +1,30 @@
+
+version: 2
+
+models:
+  - name: fact_order
+    description: "A order dbt model"
+    columns:
+      - name: customer_id
+        description: "The customer order for this table"
+        data_tests:
+          - not_null
+      - name: order_purchase_timestamp
+        description: "Timestamp of order purchase"
+        tests:
+          - is_datetime
+  - name: fact_order_items
+    description: "A order items dbt model"
+    columns:
+      - name: order_item_id
+        description: "Order items for this table"
+        tests:
+          - not_null
+      - name: order_delivered_customer_date
+        description: "Timestamp of order delivered"
+        tests:
+          - is_datetime
+      - name: order_estimated_delivery_date
+        description: "Timestamp of estimated order delivery"
+        tests:
+          - is_datetime
