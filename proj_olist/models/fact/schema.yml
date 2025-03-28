@@ -24,6 +24,11 @@ models:
           - not_null
   - name: fact_order_items
     description: "A order items dbt model"
+    tests:
+      - dbt_expectations.expect_column_pair_values_A_to_be_greater_than_B:
+          column_A: order_delivered_customer_date
+          column_B: order_purchase_timestamp
+          or_equal: true
     columns:
       - name: order_item_id
         description: "Order items for this table"
@@ -61,4 +66,3 @@ models:
               to: ref('dim_seller')
               field: seller_id
           - not_null
-
