@@ -9,11 +9,13 @@ cd /home/luser/DS/course/Projects/dsai-module-2-final-project/proj_olist || { ec
 
 # Run dbt seed
 echo "Running dbt seed..."
-dbt seed  > /home/luser/DS/course/Projects/wrapper_dbt.log 2>&1
+dbt seed  > /home/luser/wrapper_dbt.log 2>&1
 
 # Check if dbt seed was successful
 if [ $? -eq 0 ]; then
     echo "dbt seed successful. Running dbt run..."
+    mv  /home/luser/DS/course/Projects/dsai-module-2-final-project/proj_olist/seeds/*.csv  /home/luser/DS/course/Projects/dsai-module-2-final-project/proj_olist/seeds/backup/
+    echo " All csv files moved to backup folder"
     dbt run >> /home/luser/wrapper_dbt.log 2>&1
     echo "dbt run completed."
 else
